@@ -17,7 +17,7 @@ const Service = () => {
           return (
             <article key={uuidv4()} className="service-card">
               <img src={item.img} alt={item.text} className="img" />
-              <h5>{item.text}</h5>
+              <h5>{item.title}</h5>
             </article>
           );
         })}

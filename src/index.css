@@ -270,15 +270,25 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.title {
+.title h3 {
   font-weight: 700;
+  color: var(--grey-800);
 }
+
 .title span {
   color: var(--primary-500);
   font-weight: 700;
   font-size: 4rem;
   font-family: "Dancing Script", cursive;
 }
+
+.title h3:hover {
+  color: var(--primary-500);
+  span {
+    color: var(--grey-800);
+  }
+}
+
 .nav-center {
   width: 90vw;
   max-width: var(--max-width);
@@ -295,19 +305,22 @@ nav {
   transition: var(--transition);
   letter-spacing: var(--letterSpacing);
   background: transparent;
-  /* margin-bottom: 0.5rem; */
 }
 
 .links a:hover {
   color: var(--primary-500);
   padding-left: 1.5rem;
+  background-color: var(--primary-100);
 }
 
 .social-icons {
   display: none;
 }
-.nav-service {
-  display: none;
+
+.service-links a {
+  color: var(--primary-700);
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -325,16 +338,6 @@ nav {
     justify-content: space-between;
   }
 
-  /* .nav-service {
-    width: 90vw;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    border-top: 1px solid var(--grey-400);
-  } */
-
   .service-links {
     /* width: 60vw; */
     border-top: 1px solid var(--grey-500);
@@ -347,9 +350,6 @@ nav {
   }
 
   .service-links a {
-    color: var(--primary-700);
-    font-size: 1rem;
-    margin-bottom: 0;
   }
 
   .service-links a:hover {
@@ -372,6 +372,7 @@ nav {
 
   .links a {
     padding: 0;
+    margin-bottom: 0.5rem;
   }
 
   .links a:hover {
@@ -471,7 +472,7 @@ nav {
 
 /*Service*/
 .service {
-  margin-top: 5rem;
+  margin: 5rem auto;
   text-align: center;
 }
 

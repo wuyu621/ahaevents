@@ -25,9 +25,11 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <h3 className="title">
-            <span>AHA</span>Events
-          </h3>
+          <Link to="/" className="title">
+            <h3>
+              <span>AHA</span>Events
+            </h3>
+          </Link>
           <button className="nav-toggle" onClick={toggleShowLinks}>
             <FaBars />
           </button>
