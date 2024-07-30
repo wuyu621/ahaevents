@@ -1,7 +1,8 @@
 import { useState, useRef } from "react";
-import { links, social } from "../data";
+import { links, social, service } from "../data";
 import { FaBars } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -32,16 +33,27 @@ const Navbar = () => {
           </button>
         </div>
         <div className="links-container" style={linkContainerStyles}>
-          <ul className="links" ref={linksRef}>
-            {links.map((link) => {
-              const { url, text } = link;
-              return (
-                <li key={uuidv4()}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
-          </ul>
+          <div ref={linksRef}>
+            <ul className="links">
+              {links.map((link) => {
+                const { url, title } = link;
+                return (
+                  <li key={uuidv4()}>
+                    <a href={url}>{title}</a>
+                  </li>
+                );
+              })}
+            </ul>
+            <ul className="links service-links">
+              {service.map((item) => {
+                return (
+                  <li key={uuidv4()}>
+                    <Link to={`/service/${item.url}`}>{item.title}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
         <ul className="social-icons">
           {social.map((socialIcon) => {
@@ -54,6 +66,18 @@ const Navbar = () => {
           })}
         </ul>
       </div>
+
+      {/* <div className="nav-service">
+        <ul className="links service-links">
+          {service.map((item) => {
+            return (
+              <li key={uuidv4()}>
+                <Link to={`/service/${item.url}`}>{item.title}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div> */}
     </nav>
   );
 };

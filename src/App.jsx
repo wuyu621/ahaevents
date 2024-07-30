@@ -5,6 +5,7 @@ import Contact from "./pages/contact";
 import ErrorPage from "./pages/ErrorPage";
 import Service from "./pages/Service";
 import Landing from "./pages/Landing";
+import { loader as serviceLoader } from "./pages/Service";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -17,7 +18,11 @@ const App = () => {
           index: true,
           element: <Landing />,
         },
-        { path: "service/:name", element: <Service /> },
+        {
+          path: "service/:service",
+          element: <Service />,
+          loader: serviceLoader,
+        },
         {
           path: "about",
           element: <About />,
