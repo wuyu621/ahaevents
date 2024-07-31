@@ -1,4 +1,4 @@
-import {Link}from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
         <button className="btn btn-block">submit</button>
       </form>{" "}
-      <Link to="/" className="btn link">
+      <Link to="/" className="btn link-btn">
         back to home
       </Link>
     </div>

@@ -1,6 +1,6 @@
 import { service } from "../data";
 import { v4 as uuidv4 } from "uuid";
-
+import { Link } from "react-router-dom";
 const Service = () => {
   return (
     <section className="service">
@@ -16,8 +16,10 @@ const Service = () => {
         {service.map((item) => {
           return (
             <article key={uuidv4()} className="service-card">
-              <img src={item.img} alt={item.text} className="img" />
-              <h5>{item.title}</h5>
+              <Link to={`/service/${item.url}`} className="link">
+                <img src={item.img} alt={item.text} className="img" />
+                <h5>{item.title}</h5>
+              </Link>
             </article>
           );
         })}

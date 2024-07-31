@@ -3,9 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
-import Service from "./pages/Service";
+import ServicePage from "./pages/ServicePage";
 import Landing from "./pages/Landing";
-import { loader as serviceLoader } from "./pages/Service";
+import { loader as serviceLoader } from "./pages/ServicePage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const App = () => {
         },
         {
           path: "service/:service",
-          element: <Service />,
+          element: <ServicePage />,
           loader: serviceLoader,
         },
         {

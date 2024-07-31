@@ -9,7 +9,7 @@ export const loader = ({ request }) => {
   return { serviceTitle };
 };
 
-const Service = () => {
+const ServicePage = () => {
   const { serviceTitle } = useLoaderData();
   const singleService = service.find((item) => item.url === serviceTitle);
   //   console.log(singleService);
@@ -17,22 +17,22 @@ const Service = () => {
   return (
     <section>
       <div className="about">
-        <div className="container">
+        <div>
           <img src={img} alt="=Img" className="img" />
         </div>
         <div className="about-info">
-          <div className="container">
+          <div>
             <h1>{title}</h1>
             <p>{info}</p>
           </div>
         </div>
       </div>
       <h1>more photo and info here</h1>
-      <Link to="/" className="btn link">
+      <Link to="/" className="btn link-btn">
         back to home
       </Link>
     </section>
   );
 };
 
-export default Service;
+export default ServicePage;

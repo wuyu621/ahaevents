@@ -6,11 +6,11 @@ const About = () => {
     <div>
       {" "}
       <div className="about">
-        <div className="container">
+        <div>
           <img src={aboutImg} alt="aboutImg" className="img" />
         </div>
         <div className="about-info">
-          <div className="container">
+          <div>
             <h1>hi, I am Athena</h1>
             <p>
               I'm a mother of two beautiful girls in Seattle, WA. Ever since I
@@ -29,7 +29,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Link to="/" className="btn link">
+      <Link to="/" className="btn link-btn">
         back to home
       </Link>
     </div>

@@ -253,8 +253,14 @@ ul {
   margin: 0 auto;
   margin-top: 1rem;
 }
-.link {
+.link-btn {
   margin: 3rem;
+}
+
+.container {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 5rem auto;
 }
 /* ============= PROJECT CSS =============== */
 
@@ -323,6 +329,11 @@ nav {
   margin-bottom: 0;
 }
 
+nav a.active {
+  color: #a0138e;
+  font-weight: 500;
+}
+
 @media screen and (min-width: 992px) {
   .nav-toggle {
     display: none;
@@ -349,8 +360,6 @@ nav {
     padding-top: 0.5rem;
   }
 
-  .service-links a {
-  }
 
   .service-links a:hover {
     background: var(--primary-400);
@@ -420,6 +429,7 @@ nav {
   align-items: center;
   background: url("./assets/heroImg.png") center/cover no-repeat;
 }
+
 .hero-banner {
   width: 90vw;
   max-width: var(--max-width);
@@ -441,6 +451,7 @@ nav {
   letter-spacing: var(--spacing);
   line-height: 1.5;
 }
+
 .hero-btn {
   padding: 0.9rem 1.6rem;
   font-size: 1.25rem;
@@ -478,6 +489,7 @@ nav {
 
 .service p {
   max-width: var(--max-width);
+  width: 90vw;
   margin: 3rem auto;
   color: var(--primary-500);
   letter-spacing: var(--spacing);
@@ -492,7 +504,13 @@ nav {
   display: grid;
   gap: 2rem;
 }
-
+.service-card {
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+}
+.service-card:hover {
+  scale: 1.05;
+}
 .service-card .img {
   height: 25rem;
 }
@@ -502,6 +520,8 @@ nav {
   font-weight: 600;
   color: var(--primary-500);
   text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {

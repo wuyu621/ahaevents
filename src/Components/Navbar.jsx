@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { links, social, service } from "../data";
 import { FaBars } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -25,11 +25,11 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/" className="title">
+          <NavLink to="/" className="title">
             <h3>
               <span>AHA</span>Events
             </h3>
-          </Link>
+          </NavLink>
           <button className="nav-toggle" onClick={toggleShowLinks}>
             <FaBars />
           </button>
@@ -50,7 +50,9 @@ const Navbar = () => {
               {service.map((item) => {
                 return (
                   <li key={uuidv4()}>
-                    <Link to={`/service/${item.url}`}>{item.title}</Link>
+                    <NavLink to={`/service/${item.url}`} className="nav-link">
+                      {item.title}
+                    </NavLink>
                   </li>
                 );
               })}
