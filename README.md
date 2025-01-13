@@ -33,7 +33,7 @@ Welcome to the **Party Balloons & Event Services** website! This multi-page webs
 ## Demo
 
 You can view a live demo of the project on Netlify:
-[ahaevents Live Demo](https://ahaevents.netlify.app/)
+[AHAevents Live Demo](https://ahaevents.netlify.app/)
 
 ![screenshot](screenshot/photo1.jpg)
 ![screenshot](screenshot/photo2.jpg)
